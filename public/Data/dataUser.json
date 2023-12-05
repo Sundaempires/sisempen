@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "full_name":"Jhon Doe",
+        "nim":"A4.17081945",
+        "email":"jhonDoe@mhs.stmik-sumedang.ac.id",
+        "password":"123456",
+        "prodi":"Teknik Informatika",
+        "role" :"mahasiswa"
+    },
+    {
+        "id":2,
+        "full_name":"Mike Carl",
+        "nim":"A3.18181818",
+        "email":"mikeCarl@mhs.stmik-sumedang.ac.id",
+        "password":"123456",
+        "prodi":"Sistem Informasi",
+        "role" :"mahasiswa"
+    },
+    {
+        "id":3,
+        "full_name":"Albert Einstein",
+        "nim":"A2.18181818",
+        "email":"albert@dsn.stmik-sumedang.ac.id",
+        "password":"123456",
+        "prodi":"Fakultas Teknologi Informasi",
+        "role" :"Dosen"
+    },
+    {
+        "id":4,
+        "full_name":"Max Gregor",
+        "nim":"A1.00000001",
+        "email":"gregor@adm.stmik-sumedang.ac.id",
+        "password":"123456",
+        "prodi":"Fakultas Telnologi Informasi",
+        "role" :"admin"
+    }
+]
