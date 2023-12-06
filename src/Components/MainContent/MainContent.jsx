@@ -1,12 +1,12 @@
 import Header from "../Header/Index"
 
-const dosenMain = ({ toggleSidebar, dashContent }) => {
+const MainContent = ({ toggleSidebar, MainContent }) => {
     return (
         <div className="w-full bg-gray-100">
             <Header toggleSidebar={toggleSidebar} />
-            {dashContent}
+            {MainContent}
         </div>
     )
 }
 
-export default dosenMain
+export default MainContent

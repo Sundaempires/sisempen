@@ -1,6 +1,6 @@
 "use client"
 import SideBarDosen from "@/Components/SideBar/SideBarDosen"
-import DosenMain from "@/Components/MainContent/DosenMain"
+import DosenMain from "@/Components/MainContent/MainContent"
 import ModalUpload from "@/Components/Modal/ModalUpload"
 import ModalInfo from "@/Components/Modal/ModalInfo"
 import React, { useState } from 'react';
@@ -29,7 +29,7 @@ const Page = () => {
             <SideBarDosen isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
             <DosenMain
                 toggleSidebar={toggleSidebar}
-                dashContent={
+                MainContent={
                     <div className="w-full p-2">
                         <div className="w-full flex justify-center gap-2">
                             <button onClick={toggleUpload} className="bg-white py-4 text-sm font-bold w-full rounded">Upload (+)</button>

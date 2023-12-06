@@ -1,6 +1,6 @@
 "use client"
 import SideBarDosen from "@/Components/SideBar/SideBarDosen"
-import DosenMain from "@/Components/MainContent/DosenMain"
+import DosenMain from "@/Components/MainContent/MainContent"
 import React, { useState } from 'react';
 
 const Page = () => {
@@ -16,14 +16,14 @@ const Page = () => {
             <SideBarDosen isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
             <DosenMain
                 toggleSidebar={toggleSidebar}
-                dashContent={
+                MainContent={
                     <div className="w-full p-2">
                         <div className="w-full flex justify-center gap-2">
                             <button className="bg-white py-4 text-sm font-bold w-full rounded">Informasi Tugas</button>
                             <button className="bg-white py-4 text-sm font-bold w-full rounded">Mahasiswa yang mengikuti</button>
                         </div>
-                        <p className="py-2 text-sm">Preview</p>
-                        <div className=" py-3 bg-white rounded h-128">
+                        <p className="py-2 text-sm">Statistik Mahasiswa</p>
+                        <div className=" py-3 bg-white rounded h-128 overflow-x-auto">
                             <table className="w-full text-xs bg-white">
                                 <thead>
                                     <tr className="">
@@ -40,8 +40,8 @@ const Page = () => {
                                         <td className="py-4">1</td>
                                         <td className="text-start">Jhone Doe</td>
                                         <td className="text-start">A2.2000118</td>
-                                        <td className="text-start">70%</td>
-                                        <td className="text-start text-green-600">Submited</td>
+                                        <td className="text-start text-red-600">70%</td>
+                                        <td className="text-start text-green-600">90%</td>
                                         <td className="">
                                             <button className="px-3 py-2  bg-blue-600 text-white rounded mr-3">Detail</button>
                                         </td>
