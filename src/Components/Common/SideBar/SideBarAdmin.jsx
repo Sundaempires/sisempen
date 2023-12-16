@@ -1,8 +1,10 @@
 import Link from "next/link"
+import { RxDashboard, RxBell } from "react-icons/rx";
+import { TbUsers, TbReportMoney } from "react-icons/tb";
+import { PiStudent } from "react-icons/pi";
+import { IoClose } from "react-icons/io5";
 import Image from "next/image"
-import apps from "/public/icons/apps.png"
 import register from "/public/icons/register.png"
-import close from "/public/icons/close.png"
 import logo from "/public/icons/logo.png"
 import exit from "/public/icons/exit.png"
 
@@ -14,54 +16,48 @@ const SideBarAdmin = ({isOpen, toggleSidebar}) => {
                 <p className="font-bold text-lg">Sisempen</p>
                 {/* button close sidebar */}
                 <button className="xl:hidden block absolute right-4" onClick={toggleSidebar}>
-                    <Image src={close} width={20} height={50} className="" alt=""/>
+                    <IoClose className="text-2xl"/>
                 </button>
             </div>
             
             <ul className="mt-8 text-sm text-gray-600 text-color-secondary">
-                <p className="mb-2 text-gray-400">Dashboard</p>
+                {/* <p className="mb-2 pl-4 text-gray-400">Dashboard</p> */}
                 <Link href="">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
-                        <Image src={apps} width={20} height={15} alt="Dashboard"/>
-                        Ringkasan
+                        <RxDashboard className="text-2xl"/>
+                        Dashboard
                     </li>
                 </Link>
-                <p className="mb-2 text-gray-400">Upload</p>
+                {/* <p className="mb-2 pl-4 text-gray-400">Upload</p> */}
                 <Link href="">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
-                        <Image src={register} width={20} height={15} alt="Register"/>
-                        Konten
+                        <TbUsers className="text-2xl"/>
+                        Users
                     </li>
                 </Link>
                 <Link href="">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
-                        <Image src={register} width={20} height={15} alt="Register"/>
-                        Nilai
+                        <PiStudent className="text-2xl"/>
+                        Course
                     </li>
                 </Link>
-                <p className="mb-2 text-gray-400">Management</p>
+                {/* <p className="mb-2 pl-4 text-gray-400">Management</p> */}
                 <Link href="">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2">
                         <Image src={register} width={20} height={15} alt="Course"/>
-                        Dosen
-                    </li>
-                </Link>
-                <Link href="">
-                    <li className="flex gap-4 items-center py-5 p-4 rounded mb-2">
-                        <Image src={register} width={20} height={15} alt="Course"/>
-                        Mahasiswa
-                    </li>
-                </Link>
-                <Link href="">
-                    <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
-                        <Image src={register} width={20} height={15} alt="Register"/>
-                        Kursus
+                        Scores
                     </li>
                 </Link>
                 <Link href="">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2">
-                        <Image src={register} width={20} height={15} alt="Course"/>
-                        Pembayaran
+                        <RxBell className="text-2xl"/>
+                        Announcement
+                    </li>
+                </Link>
+                <Link href="">
+                    <li className="flex gap-4 items-center py-5 p-4 rounded mb-2">
+                        <TbReportMoney className="text-2xl"/>
+                        Finance
                     </li>
                 </Link>
                 <Link href="">

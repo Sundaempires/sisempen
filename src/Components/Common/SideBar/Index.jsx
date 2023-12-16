@@ -1,14 +1,13 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import about from "/public/icons/about.png"
-import course from "/public/icons/course.png"
-import exit from "/public/icons/exit.png"
-import apps from "/public/icons/apps.png"
-import register from "/public/icons/register.png"
-import close from "/public/icons/close.png"
 import logo from "/public/icons/logo.png"
 import profile from "/public/icons/profile.png"
+import { IoClose } from "react-icons/io5";
+import { RxDashboard, RxFileText } from "react-icons/rx";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { BiLogOut } from "react-icons/bi";
+import { PiStudent } from "react-icons/pi";
 
 
 const SideBar = ({isOpen, toggleSidebar}) => {
@@ -20,8 +19,8 @@ const SideBar = ({isOpen, toggleSidebar}) => {
                 <Image src={logo} width={25} height={15} alt="logo"/>
                 <p className="font-bold text-lg">Sisempen</p>
                 {/* button close sidebar */}
-                <button className="xl:hidden block absolute right-4" onClick={toggleSidebar}>
-                    <Image src={close} width={20} height={50} className="" alt=""/>
+                <button className="xl:hidden block absolute right-2" onClick={toggleSidebar}>
+                    <IoClose className="text-2xl"/>
                 </button>
             </div>
 
@@ -39,19 +38,19 @@ const SideBar = ({isOpen, toggleSidebar}) => {
                 {/* <p className="mb-2">Main Menu</p> */}
                 <Link href="/Mahasiswa">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
-                        <Image src={apps} width={20} height={15} alt="Dashboard"/>
+                        <RxDashboard className="text-2xl"/>
                         Dashboard
                     </li>
                 </Link>
                 <Link href="/Mahasiswa/Register">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
-                        <Image src={register} width={20} height={15} alt="Register"/>
+                        <RxFileText className="text-2xl"/>
                         Register
                     </li>
                 </Link>
                 <Link href="/Mahasiswa/Course">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2">
-                        <Image src={course} width={20} height={15} alt="Course"/>
+                        <PiStudent className="text-2xl"/>
                         Course
                     </li>
                 </Link>
@@ -60,12 +59,12 @@ const SideBar = ({isOpen, toggleSidebar}) => {
                 {/* <p className="mb-2">General</p> */}
                 <Link href="/Mahasiswa/Informasi">
                     <li className="flex gap-4 items-center py-5  p-4 rounded mb-2 cursor-pointer">
-                        <Image src={about} width={20} height={15} alt="About"/>
+                        <AiOutlineInfoCircle className="text-2xl"/>
                         Information
                     </li>
                 </Link>
                 <li className="flex gap-4 items-center py-5  p-4 rounded mb-2 cursor-pointer">
-                    <Image src={exit} width={20} height={15} alt="Exit"/>
+                    <BiLogOut className="text-2xl"/>
                     Log Out
                 </li>
             </ul>

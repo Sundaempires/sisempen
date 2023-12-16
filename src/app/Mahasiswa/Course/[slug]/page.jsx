@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import SideBar from "@/Components/SideBar/Index"
+import SideBar from "@/Components/Common/SideBar/Index"
 
 const Page = () => {
     const [activeTab, setActiveTab] = useState('Absen');
@@ -88,7 +88,7 @@ const Page = () => {
                                 </div>}
                             {activeTab === 'Tugas' &&
                                 <div className='flex md:flex-row flex-col items-center md:h-64 min-h-full relative'>
-                                    <div className='text-sm md:border-r-2 border-gray-300 flex flex-col w-3/5'>
+                                    <div className='text-sm md:border-r-2 border-gray-300 flex flex-col md:w-3/5'>
                                         <div className='mb-2'>
                                             <p className='font-bold mb-1'>Deskripsi</p>
                                             <p className='text-gray-400 pr-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in risus lorem. Duis a est vitae turpis finibus pharetra a quis orci.</p>
@@ -106,7 +106,7 @@ const Page = () => {
                                             <p className='text-xs w-20 text-center'>Tugas 1</p>
                                         </div>
                                     </div>
-                                    <div className='w-2/5 flex flex-col justify-center items-center text-sm'>
+                                    <div className='md:w-2/5 flex flex-col justify-center items-center text-sm'>
                                         <p className='font-bold'>Kumpulkan</p>
                                         <p className='text-gray-400 text-center'>Pastikan anda mengirim file dengan benar</p>
                                         <button className='bg-blue-500 px-4 py-2 rounded text-white font-bold mt-3'>Submit</button>

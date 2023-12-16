@@ -1,10 +1,12 @@
 "use client"
+import { FiPlusCircle } from "react-icons/fi";
+
 
 const Table = ({ api }) => {
 
   return (
     <div className="bg-gray-100 rounded h-128 md:px-2 py-0">
-      <table className="md:w-full text-sm bg-white w-96 overflow-y-auto">
+      <table className="w-full text-sm bg-white">
         <thead>
           <tr className="text-xs bg-gray-200">
             <th className="pl-5 py-5 text-start">Kode</th>
@@ -30,7 +32,9 @@ const Table = ({ api }) => {
                 <td className="text-center">{course.attributes.mhs_mengulang}</td>
                 <td className="text-center">0</td>
                 <td className="text-center cursor-pointer flex justify-center items-center h-full py-4">
-                  <button className="font-bold border-2 border-blue-600 text-blue-600 w-5 h-5 rounded-full">+</button>
+                  <button className=" flex justify-center items-center w-5 h-5">
+                    <FiPlusCircle className="text-blue-500 text-lg cursor-pointer mt-0.5"/>
+                  </button>
                 </td>
               </tr>
             )

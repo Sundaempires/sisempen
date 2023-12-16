@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.0.0",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@phosphor-icons/react": "^2.0.14",
@@ -17,6 +18,7 @@
     "react": "^18",
     "react-calendar": "^4.6.1",
     "react-dom": "^18",
+    "react-icons": "^4.12.0",
     "react-popper": "^2.3.0"
   },
   "devDependencies": {

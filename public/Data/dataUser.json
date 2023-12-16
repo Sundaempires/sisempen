@@ -7,5 +7,23 @@
         "prodi": "Teknik Informatika",
         "password": "123456",
         "role": "mahasiswa"
+    },
+    {
+        "id": 2,
+        "full_name": "Max Charl",
+        "nim": "A1.001",
+        "email": "jhonDoe@adm.stmik-sumedang.ac.id",
+        "prodi": "Fakultas Teknologi Informasi",
+        "password": "123456",
+        "role": "admin"
+    },
+    {
+        "id": 3,
+        "full_name": "Albert Einsten",
+        "nim": "A2.001",
+        "email": "jhonDoe@dsn.stmik-sumedang.ac.id",
+        "prodi": "Teknik Informatika",
+        "password": "123456",
+        "role": "dosen"
     }
 ]

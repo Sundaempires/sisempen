@@ -4,7 +4,7 @@ import React from "react"
 const Card = () => {
 
     return (
-        <div className="md:w-100 w-full h-auto p-2">
+        <div className="md:w-100 w-full h-auto px-4 py-2">
             <div className="bg-white w-full h-auto rounded py-2 px-3 flex flex-row gap-5 mb-2">
                 <div className="w-36 h-36 rounded flex justify-center items-center bg-black text-white">MPPL</div>
                 <div className="w-full">

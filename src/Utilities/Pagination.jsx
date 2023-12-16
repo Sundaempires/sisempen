@@ -28,6 +28,7 @@ const Pagination = ({ page, lastPage, setPage, handleSemesterChange }) => {
   return (
     <div className='flex flex-row justify-between p-2'>
       <Dropdown handleSemesterChange={handleSemesterChange}/>
+      {/* <i className='text-red-500 text-sm py-2'>sks yang anda pilih melebihi batas maksimal yaitu 9 sks</i> */}
       <div className="flex justify-center gap-2">
         <button
           className="cursor-pointer bg-white p-2 rounded"
