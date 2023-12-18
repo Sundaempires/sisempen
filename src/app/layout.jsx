@@ -3,7 +3,6 @@ import './globals.css'
 
 const rubik = Rubik({
   subsets: ['latin'],
-  // weight: []
 })
 
 export const metadata = {

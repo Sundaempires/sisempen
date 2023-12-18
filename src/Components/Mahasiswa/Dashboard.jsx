@@ -13,15 +13,14 @@ const Dashboard = ({ toggleSidebar }) => {
         const fetchData = async () => {
             try {
                 let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses?pagination[page]=${page}`;
-
                 if (selectedSemester && selectedSemester !== 'All') {
                     url += `&filters[semester][$eq]=${selectedSemester}`;
                 }
-
                 const res = await fetch(url);
                 const data = await res.json();
                 setCourses(data);
                 setLastPage(data.meta.pagination.pageCount);
+
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

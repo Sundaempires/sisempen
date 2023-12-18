@@ -22,20 +22,20 @@ const SideBarAdmin = ({isOpen, toggleSidebar}) => {
             
             <ul className="mt-8 text-sm text-gray-600 text-color-secondary">
                 {/* <p className="mb-2 pl-4 text-gray-400">Dashboard</p> */}
-                <Link href="">
+                <Link href="/admin">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
                         <RxDashboard className="text-2xl"/>
                         Dashboard
                     </li>
                 </Link>
                 {/* <p className="mb-2 pl-4 text-gray-400">Upload</p> */}
-                <Link href="">
+                <Link href="/admin/users">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
                         <TbUsers className="text-2xl"/>
                         Users
                     </li>
                 </Link>
-                <Link href="">
+                <Link href="/admin/course">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
                         <PiStudent className="text-2xl"/>
                         Course

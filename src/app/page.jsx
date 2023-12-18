@@ -1,22 +1,37 @@
 "use client"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from "next/image"
 import logo from "/public/icons/logo.png"
-import dataUser from '/public/Data/dataUser.json'
 import { useRouter } from 'next/navigation'
 
 const Page = () => {
+  const [data, setData] = useState([])
+  const router = useRouter()
+
   const [nim, setNim] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const router = useRouter()
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/useres`);
+        const result = await res.json();
+        setData(result.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setData([]);
+      }
+    }
+    fetchData()
+  }, [])
 
   const handleLogin = () => {
-    const user = dataUser.find(u => u.nim === nim);
-
+    const user = data.find(u => u.attributes.nim === nim);
+  
     if (user) {
-      if (user.password === password) {
-        handleSuccessfulLogin(user.role);
+      if (user.attributes.password === password) {
+        handleSuccessfulLogin(user.attributes.role);
       } else {
         setError('Incorrect password');
       }
@@ -27,6 +42,7 @@ const Page = () => {
       }, 3000);
     }
   };
+  
 
   const handleSuccessfulLogin = (role) => {
     switch (role) {
@@ -79,9 +95,12 @@ const Page = () => {
         </div>
         <button onClick={handleLogin} className="text-center bg-blue-500 text-white min-w-96 py-2 rounded mb-4">Log In</button>
         <button className="text-center border border-blue-500 text-blue-500 min-w-96 py-2 rounded">Sign Up</button>
+
+        {/* pemberitahuan user tidak ditemukan */}
         {error &&
           <p style={{ color: 'red' }} className='fixed w-96 right-8 top-5 bg-red-200 px-4 py-3 mt-2 text-md rounded'>{error}</p>
         }
+
       </div>
     </div>
   )

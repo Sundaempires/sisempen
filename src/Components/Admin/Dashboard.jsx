@@ -1,12 +1,12 @@
 import Header from "../Common/Header/Index"
 import { TbUsers } from "react-icons/tb";
 
-const Dashboard = () => {
+const Dashboard = ({ toggleSidebar }) => {
     return (
         <div className="w-full bg-gray-100">
-            <Header />
+            <Header toggleSidebar={toggleSidebar} />
             <div className="w-full p-2">
-                <div className='flex flex-row justify-around py-3'>
+                <div className='flex flex-row flex-wrap justify-around py-3'>
                     <div className="bg-white w-72 border border-gray-300 p-3 rounded">
                         <div className="flex flex-row items-center p-1 gap-2">
                             <TbUsers className="text-sm" />
@@ -51,7 +51,15 @@ const Dashboard = () => {
             </div>
             <div className="w-full px-5">
                 <p className="text-sm mb-3">Perlu Tindakan</p>
-                <div className="bg-white w-full flex flex-fow justify-between items-center px-3 py-4 border rounded text-xs">
+                <div className="bg-white w-full flex flex-fow justify-between items-center px-3 py-4 border rounded text-xs mb-2">
+                    <p>A2.2000118</p>
+                    <p>Hamdun Muzadi</p>
+                    <p>7</p>
+                    <p>9 sks</p>
+                    <p>Rp. 810.000</p>
+                    <button className="bg-green-300 rounded p-2">Acc</button>
+                </div>
+                <div className="bg-white w-full flex flex-fow justify-between items-center px-3 py-4 border rounded text-xs mb-2">
                     <p>A2.2000118</p>
                     <p>Hamdun Muzadi</p>
                     <p>7</p>
