@@ -8,9 +8,17 @@ import { RxDashboard, RxFileText } from "react-icons/rx";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BiLogOut } from "react-icons/bi";
 import { PiStudent } from "react-icons/pi";
+import { removeCookie } from "@/Utilities/cookies"
+import { useRouter } from "next/navigation"
 
 
 const SideBar = ({isOpen, toggleSidebar}) => {
+    const router = useRouter();
+
+    const handleLogout = () => {
+        removeCookie('user');
+        router.push('/');
+    }
 
     return (
         
@@ -63,7 +71,7 @@ const SideBar = ({isOpen, toggleSidebar}) => {
                         Information
                     </li>
                 </Link>
-                <li className="flex gap-4 items-center py-5  p-4 rounded mb-2 cursor-pointer">
+                <li className="flex gap-4 items-center py-5  p-4 rounded mb-2 cursor-pointer" onClick={handleLogout}>
                     <BiLogOut className="text-2xl"/>
                     Log Out
                 </li>

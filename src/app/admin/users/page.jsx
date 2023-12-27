@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Users from "../../../Components/Admin/Users"
 import SideBarAdmin from './../../../Components/Common/SideBar/SideBarAdmin';
+import LayoutAdmin from "@/Components/Admin/LayoutAdmin";
 
 const Page = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -11,10 +12,10 @@ const Page = () => {
         console.log("button diclick (/Mahasiswa)")
     };
     return (
-        <div className="flex flex-row">
+        <LayoutAdmin>
             <SideBarAdmin isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}/>
             <Users toggleSidebar={toggleSidebar}/>
-        </div>
+        </LayoutAdmin>
     )
 }
 

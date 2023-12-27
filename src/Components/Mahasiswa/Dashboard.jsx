@@ -12,14 +12,14 @@ const Dashboard = ({ toggleSidebar }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/courses?pagination[page]=${page}`;
+                let url = `/api/courses?page=${page}`;
                 if (selectedSemester && selectedSemester !== 'All') {
-                    url += `&filters[semester][$eq]=${selectedSemester}`;
+                    url += `&semester=${selectedSemester}`;
                 }
                 const res = await fetch(url);
                 const data = await res.json();
                 setCourses(data);
-                setLastPage(data.meta.pagination.pageCount);
+                setLastPage(data.totalPages);
 
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -32,6 +32,7 @@ const Dashboard = ({ toggleSidebar }) => {
     const handleSemesterChange = async (selectedSemester) => {
         setSelectedSemester(selectedSemester);
         setPage(1);
+        console.log(selectedSemester);
     };
 
     return (

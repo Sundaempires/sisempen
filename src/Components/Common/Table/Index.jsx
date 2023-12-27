@@ -25,11 +25,11 @@ const Table = ({ api }) => {
                 key={index}
                 className="text-xs border-b-2 border-b-gray-200 "
               >
-                <td className="pl-5 py-5">{course.attributes.course_code}</td>
-                <td className="">{course.attributes.course_name}</td>
-                <td className="text-center">{course.attributes.sks}</td>
-                <td className="text-center">{course.attributes.semester}</td>
-                <td className="text-center">{course.attributes.mhs_mengulang}</td>
+                <td className="pl-5 py-5">{course.course_code}</td>
+                <td className="">{course.course_name}</td>
+                <td className="text-center">{course.sks}</td>
+                <td className="text-center">{course.semester}</td>
+                <td className="text-center">{course.mhs_mengulang}</td>
                 <td className="text-center">0</td>
                 <td className="text-center cursor-pointer flex justify-center items-center h-full py-4">
                   <button className=" flex justify-center items-center w-5 h-5">

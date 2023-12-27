@@ -1,10 +1,301 @@
-[
-    {
-        "id": 1,
-        "name": "",
-        "code": "",
-        "shortname": "",
-        "sks": "",
-        "semester": ""
-    }
-]
+{
+    "data": [
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 7,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 7,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 7,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 7,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 7,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 1,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 1,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 2,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 2,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 3,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 3,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 3,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 3,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 4,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 6,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 6,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 6,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 8,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 5,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 1,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Manajemen Resiko TI",
+            "course_code": "FT3113",
+            "course_short_name": "MRTI",
+            "sks": 3,
+            "semester": 1,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Proyek Perangkat Lunak",
+            "course_code": "IF4101",
+            "course_short_name": "PPL",
+            "sks": 3,
+            "semester": 1,
+            "mhs_mengulang": 0
+        },
+        {
+            "id": 1,
+            "course_name": "Digital Startup",
+            "course_code": "ST1025",
+            "course_short_name": "DS",
+            "sks": 2,
+            "semester": 1,
+            "mhs_mengulang": 0
+        }
+    ]
+}

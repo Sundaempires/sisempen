@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import SideBar from "@/Components/Common/SideBar/Index"
 import Registration from './../../../Components/Mahasiswa/Registration';
+import LayoutMahasiswa from '@/Components/Mahasiswa/LayoutMahasiswa';
 
 const Page = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,10 +13,10 @@ const Page = () => {
     };
 
     return (
-        <div className="flex flex-row">
+        <LayoutMahasiswa>
             <SideBar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
             <Registration toggleSidebar={toggleSidebar} />
-        </div>
+        </LayoutMahasiswa>
     )
 }
 
