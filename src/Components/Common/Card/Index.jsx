@@ -32,7 +32,7 @@ const Card = () => {
                             <p className="hidden md:block font-bold text-xs w-6 h-6 text-center rounded">15</p>
                             <p className="hidden md:block font-bold text-xs w-6 h-6 text-center rounded">16</p>
                             {/* Button Lihat MK */}
-                            <Link href="/Mahasiswa/Course/hahahah" className="bg-black px-3 py-2 text-xs text-white rounded md:absolute bottom-0 right-1">View</Link>
+                            <Link href="/Mahasiswa/Course/View" className="bg-black px-3 py-2 text-xs text-white rounded md:absolute bottom-0 right-1">View</Link>
                         </div>
                     </div>
                 </div>

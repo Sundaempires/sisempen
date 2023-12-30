@@ -44,7 +44,7 @@ const SideBarAdmin = ({isOpen, toggleSidebar}) => {
                         Users
                     </li>
                 </Link>
-                <Link href="/admin/course">
+                <Link href="">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
                         <PiStudent className="text-2xl"/>
                         Course

@@ -4,10 +4,10 @@ import Image from "next/image";
 import logo from "/public/icons/logo.png";
 import { useRouter } from "next/navigation";
 import { getCookie, setCookie } from "@/Utilities/cookies";
+import axios from "axios";
 
 const Page = () => {
   const router = useRouter();
-  const [data, setData] = useState([]);
   const [nim, setNim] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -18,37 +18,45 @@ const Page = () => {
       const user = JSON.parse(getCookieUser);
       handleSuccessfulLogin(user);
     }
-
-    const fetchData = async () => {
-      try {
-        const res = await fetch(`/api/users`);
-        const result = await res.json();
-        setData(result.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setData([]);
-      }
-    };
-    fetchData();
   }, []);
 
-  const handleLogin = () => {
-    const user = data.find((u) => u.nim === nim);
+  const handleSetError = (err) => {
+    setError(err);
+    setTimeout(() => {
+      setError("");
+    }, 3000);
+  }
 
-    if (user) {
-      if (user.password === password) {
-        setCookie("user", JSON.stringify(user));
-        handleSuccessfulLogin(user);
+  const handleLogin = async () => {
+    try {
+      if (!nim) {
+        handleSetError("NIM is required")
+        return;
+      };
+      if (!password) {
+        handleSetError("Password is required") 
+        return;
+      };
+
+      const response = await axios.get(`/api/users/search?nim=${nim}&password=${password}`);
+      const user = response.data;
+      console.log(user);
+  
+      if (user) {
+        if (user.password === password) {
+          setCookie("user", JSON.stringify(user));
+          handleSuccessfulLogin(user);
+        } else {
+          handleSetError("User or password incorrect.");
+        }
       } else {
-        setError("Incorrect password");
+        handleSetError("User not found");
       }
-    } else {
-      setError("User not found");
-      setTimeout(() => {
-        setError("");
-      }, 3000);
+    } catch (error) {
+      console.error("Error fetching user:", error);
     }
   };
+  
 
   const handleSuccessfulLogin = (user) => {
     switch (user.role) {
