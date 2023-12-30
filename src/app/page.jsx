@@ -30,7 +30,7 @@ const Page = () => {
   const handleLogin = async () => {
     try {
       if (!nim) {
-        handleSetError("NIM is required")
+        handleSetError("Username is required")
         return;
       };
       if (!password) {
