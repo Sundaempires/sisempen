@@ -44,7 +44,7 @@ const SideBarAdmin = ({isOpen, toggleSidebar}) => {
                         Users
                     </li>
                 </Link>
-                <Link href="">
+                <Link href="/admin/courses">
                     <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 ">
                         <PiStudent className="text-2xl"/>
                         Course
@@ -69,7 +69,7 @@ const SideBarAdmin = ({isOpen, toggleSidebar}) => {
                         Finance
                     </li>
                 </Link>
-                <li className="flex gap-4 items-center py-5 p-4 rounded mt-16 mb-2 bg-red-200 font-bold text-black cursor-pointer" onClick={handleLogout}>
+                <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 text-black cursor-pointer" onClick={handleLogout}>
                     <Image src={exit} width={20} height={15} alt="Course"/>
                     Keluar
                 </li>

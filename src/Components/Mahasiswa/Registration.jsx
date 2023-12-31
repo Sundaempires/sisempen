@@ -1,10 +1,10 @@
 import { LuTrash2 } from "react-icons/lu";
 import Header from "../Common/Header/Index"
 
-const Registration = ({ toggleSidebar }) => {
+const Registration = ({ toggleSidebar,titleMenu }) => {
     return (
         <div className="w-full min-h-screen bg-gray-100">
-            <Header toggleSidebar={toggleSidebar} />
+            <Header toggleSidebar={toggleSidebar} titleMenu="Register"/>
             <div className=" w-full flex justify-center items-center py-2 md:py-8">
                 <div className="bg-white md:p-5 flex flex-col rounded border-2 border-gray-200">
                     <div className="flex md:flex-row flex-col gap-5 w-fit">

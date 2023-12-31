@@ -1,7 +1,8 @@
 import Header from "../Common/Header/Index"
 import React, { useState } from 'react';
 
-const Dashboard = () => {
+const Dashboard = ({toggleSidebar,titleMenu}) => {
+    const title = "Dashboard"
     const [activeTab, setActiveTab] = useState('Tugas');
 
     const handleTabClick = (tabName) => {
@@ -10,7 +11,7 @@ const Dashboard = () => {
 
     return (
         <div className="w-full bg-gray-100">
-            <Header />
+            <Header toggleSidebar={toggleSidebar} titleMenu={title}/>
             <div className="w-full p-2">
                 <div className="w-full flex justify-center gap-2">
                     <button

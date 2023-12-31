@@ -3,7 +3,7 @@ import Pagination from '@/Utilities/Pagination';
 import Table from '../Common/Table/Index';
 import Header from '../Common/Header/Index';
 
-const Dashboard = ({ toggleSidebar }) => {
+const Dashboard = ({ toggleSidebar,titleMenu }) => {
     const [page, setPage] = useState(1);
     const [courses, setCourses] = useState([]);
     const [lastPage, setLastPage] = useState(1);
@@ -37,7 +37,7 @@ const Dashboard = ({ toggleSidebar }) => {
 
     return (
         <div className="w-full bg-gray-100">
-            <Header toggleSidebar={toggleSidebar} />
+            <Header toggleSidebar={toggleSidebar} titleMenu="Dashboard"/>
             <Pagination page={page} lastPage={lastPage} setPage={setPage} handleSemesterChange={handleSemesterChange} />
             <Table api={courses} />
         </div>

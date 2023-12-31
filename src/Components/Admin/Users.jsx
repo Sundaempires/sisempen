@@ -51,39 +51,43 @@ const Users = ({ toggleSidebar }) => {
     }
 
     return (
-        <div className="w-full bg-gray-100">
-            <Header toggleSidebar={toggleSidebar} />
-            <div className="flex flex-row gap-2 p-3 justify-center">
-                <button className="bg-white px-4 py-3 rounded w-1/3">Tambah +</button>
-                <button className="bg-white px-4 py-3 rounded w-1/3" onClick={(e) => setSelectedRole(null)}>Semua</button>
-                <button className="bg-white px-4 py-3 rounded w-1/3" onClick={(e) => setSelectedRole("mahasiswa")}>Mahasiswa</button>
-                <button className="bg-white px-4 py-3 rounded w-1/3" onClick={(e) => setSelectedRole("dosen")}>Dosen</button>
+        <div className="w-full bg-gray-100 p-3">
+            <Header toggleSidebar={toggleSidebar} titleMenu="User" />
+            <div className="flex justify-between gap-2 py-2 text-sm">
+                <div className="flex flex-row gap-2">
+                    <button className="bg-white p-2 rounded ">Tambah +</button>
+                    <button className="bg-white p-2 rounded " onClick={(e) => setSelectedRole(null)}>Semua</button>
+                    <button className="bg-white p-2 rounded " onClick={(e) => setSelectedRole("mahasiswa")}>Mahasiswa</button>
+                    <button className="bg-white p-2 rounded " onClick={(e) => setSelectedRole("dosen")}>Dosen</button>
+                </div>
+                <div className="flex flex-row gap-2">
+                    <button
+                        className="cursor-pointer bg-white p-2 rounded"
+                        onClick={handlePrevPage}
+                    >
+                        <Image src={iconPrev} width={15} height={15} alt="logo" />
+                    </button>
+                    <p className="bg-white font-bold w-20 flex justify-center items-center p-2 rounded text-sm">
+                        {page} / {lastPage}
+                    </p>
+                    <button
+                        className="cursor-pointer bg-white p-2 rounded"
+                        onClick={handleNextPage}
+                    >
+                        <Image src={iconNext} width={15} height={15} alt="logo" />
+                    </button>
+                </div>
             </div>
-            <div className="flex justify-end gap-2 px-3 pb-3">
-                <button
-                    className="cursor-pointer bg-white p-2 rounded"
-                onClick={handlePrevPage}
-                >
-                    <Image src={iconPrev} width={15} height={15} alt="logo" />
-                </button>
-                <p className="bg-white font-bold w-20 flex justify-center items-center p-2 rounded text-sm">
-                    {page} / {lastPage}
-                </p>
-                <button
-                    className="cursor-pointer bg-white p-2 rounded"
-                onClick={handleNextPage}
-                >
-                    <Image src={iconNext} width={15} height={15} alt="logo" />
-                </button>
-            </div>
-            <div className="bg-gray-100 rounded h-128 md:px-2 py-0">
+            <div className="bg-gray-100 rounded h-128">
                 <table className="w-full text-sm bg-white">
                     <thead>
                         <tr className="text-xs bg-gray-200">
                             <th className="pl-5 py-5 text-start">Kode</th>
                             <th className="text-start">Nama</th>
-                            <th className="text-center">Email</th>
-                            <th className="text-center">Role</th>
+                            <th className="text-start">Email</th>
+                            <th className="text-start">Prodi</th>
+                            <th className="text-start">Role</th>
+                            <th className="text-center">Alat</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -95,8 +99,13 @@ const Users = ({ toggleSidebar }) => {
                                 >
                                     <td className="pl-5 py-5">{course.nim}</td>
                                     <td className="">{course.full_name}</td>
-                                    <td className="text-center">{course.email}</td>
-                                    <td className="text-center">{course.role}</td>
+                                    <td className="text-start">{course.email}</td>
+                                    <td className="text-start">{course.prodi}</td>
+                                    <td className="text-start">{course.role}</td>
+                                    <td className="text-center">
+                                        <button className="bg-blue-200 rounded p-2">Edit</button>
+                                        <button className="bg-red-200 rounded p-2 ml-2">Delet</button>
+                                    </td>
                                 </tr>
                             )
                         })}

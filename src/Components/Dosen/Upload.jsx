@@ -1,10 +1,11 @@
 import Header from "../Common/Header/Index"
 
-const Upload = ({ toggleUpload, toggleModalInfo }) => {
+const Upload = ({ toggleUpload, toggleModalInfo, toggleSidebar, titleMenu}) => {
+    const title = "Upload"
 
     return (
         <div className="w-full bg-gray-100">
-            <Header />
+            <Header toggleSidebar={toggleSidebar} titleMenu={title}/>
             <div className="w-full p-2">
                 <div className="w-full flex justify-center gap-2">
                     <button onClick={toggleUpload} className="bg-white py-4 text-sm font-bold w-full rounded">Upload (+)</button>

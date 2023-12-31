@@ -1,9 +1,9 @@
 import Header from "../Common/Header/Index"
 
-const Information = ({toggleSidebar}) => {
+const Information = ({toggleSidebar, titleMenu}) => {
     return (
         <div className="w-full h-screen bg-gray-100">
-            <Header toggleSidebar={toggleSidebar} />
+            <Header toggleSidebar={toggleSidebar} titleMenu="Information"/>
             <div className="px-5 py-3">
                 <p className="mb-4">Riwayat Transaksi</p>
                 <div className="bg-white text-sm flex flex-row justify-between px-5 py-6 rounded">
