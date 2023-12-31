@@ -1,9 +1,8 @@
-import { Poppins } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 import './globals.css'
 
-const poppins = Poppins({
+const rubik = Rubik({
   subsets: ['latin'],
-  weight: ['200', '400', '700']
 })
 
 export const metadata = {
@@ -14,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}`} suppressHydrationWarning={true}>
+      <body className={`${rubik.className}`} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

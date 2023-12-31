@@ -1,38 +1,85 @@
-[
-    {
-        "id":1,
-        "full_name":"Jhon Doe",
-        "nim":"A4.17081945",
-        "email":"jhonDoe@mhs.stmik-sumedang.ac.id",
-        "password":"123456",
-        "prodi":"Teknik Informatika",
-        "role" :"mahasiswa"
-    },
-    {
-        "id":2,
-        "full_name":"Mike Carl",
-        "nim":"A3.18181818",
-        "email":"mikeCarl@mhs.stmik-sumedang.ac.id",
-        "password":"123456",
-        "prodi":"Sistem Informasi",
-        "role" :"mahasiswa"
-    },
-    {
-        "id":3,
-        "full_name":"Albert Einstein",
-        "nim":"A2.18181818",
-        "email":"albert@dsn.stmik-sumedang.ac.id",
-        "password":"123456",
-        "prodi":"Fakultas Teknologi Informasi",
-        "role" :"Dosen"
-    },
-    {
-        "id":4,
-        "full_name":"Max Gregor",
-        "nim":"A1.00000001",
-        "email":"gregor@adm.stmik-sumedang.ac.id",
-        "password":"123456",
-        "prodi":"Fakultas Telnologi Informasi",
-        "role" :"admin"
-    }
-]
+{
+    "data": [
+        {
+            "id": 1,
+            "full_name": "mahasiswa 1",
+            "nim": "A3.001",
+            "email": "mahasiswa1@mhs.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "mahasiswa"
+        },
+        {
+            "id": 2,
+            "full_name": "mahasiswa 2",
+            "nim": "A3.002",
+            "email": "mahasiswa2@mhs.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "mahasiswa"
+        },
+        {
+            "id": 3,
+            "full_name": "mahasiswa 3",
+            "nim": "A3.003",
+            "email": "mahasiswa3@mhs.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "mahasiswa"
+        },
+        {
+            "id": 4,
+            "full_name": "mahasiswa 4",
+            "nim": "A3.004",
+            "email": "mahasiswa4@mhs.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "mahasiswa"
+        },
+        {
+            "id": 5,
+            "full_name": "mahasiswa 5",
+            "nim": "A3.005",
+            "email": "mahasiswa5@mhs.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "mahasiswa"
+        },
+        {
+            "id": 6,
+            "full_name": "Admin",
+            "nim": "A1.001",
+            "email": "admin@adm.stmik-sumedang.ac.id",
+            "prodi": "Fakultas Teknologi Informasi",
+            "password": "123456",
+            "role": "admin"
+        },
+        {
+            "id": 7,
+            "full_name": "Dosen 1",
+            "nim": "A2.001",
+            "email": "dosen1@dsn.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "dosen"
+        },
+        {
+            "id": 8,
+            "full_name": "Dosen 2",
+            "nim": "A2.002",
+            "email": "dosen2@dsn.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "dosen"
+        },
+        {
+            "id": 9,
+            "full_name": "Dosen 3",
+            "nim": "A2.003",
+            "email": "dosen3@dsn.stmik-sumedang.ac.id",
+            "prodi": "Teknik Informatika",
+            "password": "123456",
+            "role": "dosen"
+        }
+    ]
+}

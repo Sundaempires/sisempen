@@ -6,8 +6,17 @@ import close from "/public/icons/close.png"
 import logo from "/public/icons/logo.png"
 import profile from "/public/icons/profile.png"
 import exit from "/public/icons/exit.png"
+import { useRouter } from "next/navigation"
+import { removeCookie } from "@/Utilities/cookies";
 
 const SideBarDosen = ({isOpen, toggleSidebar}) => {
+    const router = useRouter();
+
+    const handleLogout = () => {
+        removeCookie('user');
+        router.push('/');
+    }
+
     return (    
         <div className={`z-20 ${isOpen ? 'block' : 'hidden'} bg-white fixed xl:static xl:block flex-col justify-center w-full md:w-80 py-2 px-5 h-screen`}>
             <div className="flex flex-row items-center gap-3 text-sm p-3 mb-10 sm:relative">
@@ -43,12 +52,10 @@ const SideBarDosen = ({isOpen, toggleSidebar}) => {
                         Upload
                     </li>
                 </Link>
-                <Link href="">
-                    <li className="flex gap-4 items-center py-5 p-4 rounded mb-2">
-                        <Image src={exit} width={20} height={15} alt="Course"/>
-                        Log Out
-                    </li>
-                </Link>
+                <li className="flex gap-4 items-center py-5 p-4 rounded mb-2 cursor-pointer" onClick={handleLogout}>
+                    <Image src={exit} width={20} height={15} alt="Course"/>
+                    Log Out
+                </li>
             </ul>
 
         </div>

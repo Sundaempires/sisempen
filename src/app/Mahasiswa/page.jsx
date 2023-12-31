@@ -1,10 +1,11 @@
 "use client"
 import React, { useState } from 'react';
-import SideBar from "../../Components/SideBar/Index"
-import DashMain from "@/Components/MainContent/DashMain"
+import SideBar from "../../Components/Common/SideBar/Index"
+import Dashboard from './../../Components/Mahasiswa/Dashboard';
+import LayoutMahasiswa from './../../Components/Mahasiswa/LayoutMahasiswa';
 
 
-const Page = ({}) => {
+const Page = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -13,10 +14,10 @@ const Page = ({}) => {
     };
 
     return (
-        <div className="flex flex-row">
+        <LayoutMahasiswa>
             <SideBar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-            <DashMain toggleSidebar={toggleSidebar}/>
-        </div>
+            <Dashboard toggleSidebar={toggleSidebar} />
+        </LayoutMahasiswa>
     )
 }
 

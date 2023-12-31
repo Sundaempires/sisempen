@@ -18,7 +18,7 @@ const config: Config = {
         '130': '40rem',
       },
       width: {
-        '100': '100%',
+        '40': '40rem',
       }
     },
   },

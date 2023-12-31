@@ -4,7 +4,7 @@ import React from "react"
 const Card = () => {
 
     return (
-        <div className="md:w-100 w-full h-auto p-2">
+        <div className="md:w-100 w-full h-auto px-4 py-2">
             <div className="bg-white w-full h-auto rounded py-2 px-3 flex flex-row gap-5 mb-2">
                 <div className="w-36 h-36 rounded flex justify-center items-center bg-black text-white">MPPL</div>
                 <div className="w-full">
@@ -32,7 +32,7 @@ const Card = () => {
                             <p className="hidden md:block font-bold text-xs w-6 h-6 text-center rounded">15</p>
                             <p className="hidden md:block font-bold text-xs w-6 h-6 text-center rounded">16</p>
                             {/* Button Lihat MK */}
-                            <Link href="/Mahasiswa/Course/hahahah" className="bg-black px-3 py-2 text-xs text-white rounded md:absolute bottom-0 right-1">View</Link>
+                            <Link href="/Mahasiswa/Course/View" className="bg-black px-3 py-2 text-xs text-white rounded md:absolute bottom-0 right-1">View</Link>
                         </div>
                     </div>
                 </div>

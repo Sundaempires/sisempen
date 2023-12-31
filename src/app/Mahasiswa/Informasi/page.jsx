@@ -1,12 +1,22 @@
-import SideBar from "@/Components/SideBar/Index"
-import InfoMain from "@/Components/MainContent/InfoMain"
+"use client"
+import React, { useState } from 'react';
+import SideBar from "@/Components/Common/SideBar/Index"
+import Information from './../../../Components/Mahasiswa/Information';
+import LayoutMahasiswa from '@/Components/Mahasiswa/LayoutMahasiswa';
 
 const Page = () => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+        console.log("button diclick (/Register)")
+    };
+
     return (
-        <div className="flex flex-row">
-            <SideBar/>
-            <InfoMain/>
-        </div>
+        <LayoutMahasiswa>
+            <SideBar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            <Information toggleSidebar={toggleSidebar}/>
+        </LayoutMahasiswa>
     )
 }
 
