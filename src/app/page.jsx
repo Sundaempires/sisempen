@@ -94,6 +94,7 @@ const Page = () => {
               type="text"
               className="border-2 rounded p-2 mb-5 w-full"
               name="nim"
+              placeholder="e.g. mahasiswa, dosen or admin"
             />
           </div>
           <div className="min-w-96">
@@ -103,6 +104,7 @@ const Page = () => {
               type="text"
               className="border-2 rounded p-2 w-full"
               name="password"
+              placeholder="123456"
             />
           </div>
           <div className="min-w-96 flex flex-row justify-between mb-6 mt-3">

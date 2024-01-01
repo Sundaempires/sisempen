@@ -1,13 +1,24 @@
-import React from 'react'
-import { isAuthenticated, isDosen } from '@/Utilities/auth'
-import { useRouter } from 'next/navigation'
+import React, { useEffect, useState } from 'react';
+import { isAuthenticated, isDosen } from '@/Utilities/auth';
+import { useRouter } from 'next/navigation';
 
 export default function LayoutDosen({ children }) {
+    const [isLoading, setIsLoading] = useState(true);
     const router = useRouter();
-    
-    if (isAuthenticated() && isDosen()) {
-        return <div className='flex flex-row'>{children}</div>
-    } else {
-        router.push('/');
-    };
+
+    useEffect(() => {
+        if (!isAuthenticated() || !isDosen()) {
+            router.push('/');
+        } else {
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 500);
+        }
+    }, [router]);
+
+    if (isLoading) {
+        return <div className='h-screen flex items-center justify-center'>Loading...</div>;
+    }
+
+    return <div className='flex flex-row'>{children}</div>;
 }
