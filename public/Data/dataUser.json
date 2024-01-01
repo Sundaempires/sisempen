@@ -3,7 +3,7 @@
         {
             "id": 1,
             "full_name": "mahasiswa 1",
-            "nim": "A3.001",
+            "nim": "mahasiswa",
             "email": "mahasiswa1@mhs.stmik-sumedang.ac.id",
             "prodi": "Teknik Informatika",
             "password": "123456",
@@ -48,7 +48,7 @@
         {
             "id": 6,
             "full_name": "Admin",
-            "nim": "A1.001",
+            "nim": "admin",
             "email": "admin@adm.stmik-sumedang.ac.id",
             "prodi": "Fakultas Teknologi Informasi",
             "password": "123456",
@@ -57,7 +57,7 @@
         {
             "id": 7,
             "full_name": "Dosen 1",
-            "nim": "A2.001",
+            "nim": "dosen",
             "email": "dosen1@dsn.stmik-sumedang.ac.id",
             "prodi": "Teknik Informatika",
             "password": "123456",
