@@ -38,7 +38,7 @@ const Page = () => {
         return;
       };
 
-      const response = await axios.get(`/api/users/search?nim=${nim}&password=${password}`);
+      const response = await axios.post('/api/users/search', { nim, password });
       const user = response.data;
       console.log(user);
   
