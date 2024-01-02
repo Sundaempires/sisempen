@@ -1,20 +1,24 @@
-export default (req, res) => {
-    const dataUser = require('/public/Data/dataUser.json');
+export default async function handler(req, res) {
+    if (req.method === 'POST') {
+        const dataUser = require('/public/Data/dataUser.json');
 
-    if (req.query.nim) {
-        let result = {};
-        let user = dataUser.data.filter((user) => {
-            return user.nim == req.query.nim;
-        });
+        if (req.body && req.body.nim && req.body.password) {
+            let result = {};
+            let user = dataUser.data.filter((user) => {
+                return user.nim == req.body.nim;
+            });
 
-        if (user.length > 0) {
-            if (user[0].password == req.query.password) {
-                result = user[0];
+            if (user.length > 0) {
+                if (user[0].password == req.body.password) {
+                    result = user[0];
+                }
             }
+
+            return res.status(200).json(result);
         }
 
-        res.status(200).json(result);
+        return res.status(400).json({ error: 'Invalid request body' });
     }
 
-    res.status(500).json({ error: 'Invalid query' });
-};
+    return res.status(405).json({ error: 'Method Not Allowed' });
+}
